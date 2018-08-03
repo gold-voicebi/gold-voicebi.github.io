@@ -16,13 +16,11 @@
 </head>	
 
 <body onload=initializeViz();>
-<h1>Major League Soccer Standings</h1>
+<h1>Key Financial Metrics</h1>
 Say the following commands:<br /> 
-<i>"Select East"</i> 
-<i>"Select West"</i> 
-
-<i>"Filter East"</i> 
-<i>"Clear Filter"</i> 
+<i>"Which business needs focus"</i> 
+<i>"What is my sales for this year"</i> 
+<i>"How is my OI as compared to AOP"</i> 
 <i>"Export Image"</i> 
 <i>"Export PDF"</i> 
 <i>"Reset"</i>
@@ -34,7 +32,10 @@ Say the following commands:<br />
 if (annyang) {
   // These are the voice commands in quotes followed by the function
   var commands = {
-  	'Select East': function() { selectEast(); responsiveVoice.speak('selecting East', "UK English Male"); },
+	  'Which business needs focus' : function() {responsiveVoice.speak('Healthcare and Industrial segments needs focus', "UK English Male");},
+	  'What is my sales for this year' : function() {responsiveVoice.speak('Sales for this year is one hundred seventy two million dollars', "UK English Male");},
+	  'How is my OI as compared to AOP' : function() {responsiveVoice.speak('OI is down by 81 percent', "UK English Male");},
+  	
  	'Select West': function() { selectWest(); responsiveVoice.speak('selecting West', "UK English Male"); },
 	'Clear Selection': function() { clearSelection; responsiveVoice.speak('Clearing Selection', "UK English Male"); },
 	'Filter East': function() { filterEast(); responsiveVoice.speak('Filtering East', "UK English Male"); },
